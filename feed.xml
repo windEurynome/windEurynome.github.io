@@ -1,30 +1,353 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>无鱼的技术专栏</title>
+    <description></description>
+    <link>http://localhost:4001/</link>
+    <atom:link href="http://localhost:4001/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 01 Jul 2020 01:59:45 +0800</pubDate>
+    <lastBuildDate>Wed, 01 Jul 2020 01:59:45 +0800</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.excerpt | remove: '<p>' | remove: '</p>' | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Hello jekyll!</title>
+        <description>创建Jekyll的默认文章，作为第一次尝试markdown风格的纪念吧。</description>
+        <pubDate>Tue, 30 Jun 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2020/06/30/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4001/2020/06/30/welcome-to-jekyll/</guid>
+        
+        <category>jekyll</category>
+        
+        
+        <category>Eurynome</category>
+        
+        <category>jekyll</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>CentOS7定时任务详解</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#前言&quot; id=&quot;markdown-toc-前言&quot;&gt;前言&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#crontab&quot; id=&quot;markdown-toc-crontab&quot;&gt;crontab&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+
+工作中需要开启一个定时任务：每天晚上2点进行爬虫代码的运行，这不得不去学习一下linux 下的定时任务crontab
+
+&lt;h2 id=&quot;crontab&quot;&gt;crontab&lt;/h2&gt;
+
+yum install crontabs
+
+说明：
+/sbin/service crond start //启动服务
+/sbin/service crond stop //关闭服务
+/sbin/service crond restart //重启服务
+/sbin/service crond reload //重新载入配置
+查看crontab服务状态：service crond status
+手动启动crontab服务：service crond start
+查看crontab服务是否已设置为开机启动，执行命令：ntsysv
+加入开机自动启动:
+chkconfig crond on
+</description>
+        <pubDate>Sat, 10 Feb 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2018/02/10/centos-crontab/</link>
+        <guid isPermaLink="true">http://localhost:4001/2018/02/10/centos-crontab/</guid>
+        
+        <category>centos7</category>
+        
+        <category>crontab</category>
+        
+        <category>linux</category>
+        
+        <category>工具软件</category>
+        
+        
+        <category>Eurynome</category>
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>工作填坑之内网与外网</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#概念&quot; id=&quot;markdown-toc-概念&quot;&gt;概念&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;概念&quot;&gt;概念&lt;/h2&gt;
+
+内网：
+
+&lt;blockquote&gt;
+  内网也就是局域网，内网的计算机以NAT（&lt;a href=&quot;https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2&quot;&gt;网络地址转换&lt;/a&gt;）协议，通过一个公共的&lt;a href=&quot;https://baike.baidu.com/item/%E7%BD%91%E5%85%B3&quot;&gt;网关&lt;/a&gt;访问Internet。内网的计算机可向Internet上的其他计算机发送连接请求，但Internet上其他的计算机无法向内网的计算机发送连接请求。
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  最直观的就是像网吧，公司内部的电脑用交换机，HUB，路由连起来的
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Thu, 01 Feb 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2018/02/01/about-inner-outer-ip/</link>
+        <guid isPermaLink="true">http://localhost:4001/2018/02/01/about-inner-outer-ip/</guid>
+        
+        <category>MongoDB</category>
+        
+        <category>Redis</category>
+        
+        <category>工具软件</category>
+        
+        
+        <category>Eurynome</category>
+        
+        <category>工具软件</category>
+        
+      </item>
+    
+      <item>
+        <title>Ubuntu 16.04 下MySQL的安装</title>
+        <description>
+1， 打开终端：
+&lt;blockquote&gt;
+  sudo apt-get install mysql-server
+&lt;/blockquote&gt;
+
+2 ，接下来会让你选择y/n, 这里你选择y,
+
+3 ，这里会出现一个让你输入mysql-server的密码，输入完后如果鼠标点击不了，可以使用Tab键+enter键继续下一步
+
+4 ，接下来，会继续让我们输入一次密码
+</description>
+        <pubDate>Sat, 13 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2018/01/13/setup-mysql-inubuntu/</link>
+        <guid isPermaLink="true">http://localhost:4001/2018/01/13/setup-mysql-inubuntu/</guid>
+        
+        <category>linux</category>
+        
+        <category>ubuntu16.04</category>
+        
+        <category>工具软件</category>
+        
+        
+        <category>Eurynome</category>
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>win10 关闭更新</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#前言&quot; id=&quot;markdown-toc-前言&quot;&gt;前言&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#操作步骤&quot; id=&quot;markdown-toc-操作步骤&quot;&gt;操作步骤&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+
+因为自己的电脑装了双系统（win10 跟Ubuntu16.04），在win10下，有时候每次关机的时候都说要进行更新后进行关机，就是自动更新功能，现在的选项中没有关闭自动更新的选项了，这是一个bug，微软要强制更新。
+
+我就忍受不了自动更新，会拉取网络，影响我们的上网体验，但是我们不要他自动更新，那怎么办呢，其实还是有解决方法的，下面就介绍怎么关闭自动更新功能！（ps：百度有些人写的其实是win8的自动更新，根本就不是win10的，我这个才是win10的处理方法）希望能帮到你们。
+
+&lt;h2 id=&quot;操作步骤&quot;&gt;操作步骤&lt;/h2&gt;
+
+1 右键点击左下角微软按钮，找到“运行”   也可用键盘的win+R
+
+&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2577413-07f3d54cc3ce1538.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;图片.png&quot; /&gt;
+
+2 在运行处输入 “services.msc”   点击确定。
+
+&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2577413-2df616c88439415a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;图片.png&quot; /&gt;
+</description>
+        <pubDate>Sat, 13 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2018/01/13/close-win10-update/</link>
+        <guid isPermaLink="true">http://localhost:4001/2018/01/13/close-win10-update/</guid>
+        
+        <category>win10</category>
+        
+        <category>工具软件</category>
+        
+        
+        <category>Eurynome</category>
+        
+        <category>win10</category>
+        
+      </item>
+    
+      <item>
+        <title>News_scrapy_redis 框架系统</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#前言&quot; id=&quot;markdown-toc-前言&quot;&gt;前言&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#设计目标&quot; id=&quot;markdown-toc-设计目标&quot;&gt;设计目标&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+
+该文档针对爬虫系统设计目标中相应的场景给出技术方案
+
+&lt;h2 id=&quot;设计目标&quot;&gt;设计目标&lt;/h2&gt;
+
+1、代码复用，功能模块化。可以支持上千个网站的数据爬取；
+
+2、易扩展。爬虫框架易扩展，爬取规则、解析规则、入库规则易扩展，支持框架切换；
+
+3、健壮性、可维护性。对数据爬取过程中的各种异常，例如：断网、反爬升级、爬“脏数据”等，需要实时的监控，以及给出准确的定位。异常处理以及降级措施需要完善；
+
+4、后续扩展为分布式结构；
+
+5、支持功能模块的易调整；
+</description>
+        <pubDate>Tue, 09 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2018/01/09/python_crawl_words/</link>
+        <guid isPermaLink="true">http://localhost:4001/2018/01/09/python_crawl_words/</guid>
+        
+        <category>scrapy_redis</category>
+        
+        <category>爬虫</category>
+        
+        
+        <category>Eurynome</category>
+        
+        <category>爬虫</category>
+        
+      </item>
+    
+      <item>
+        <title>window下python3环境安装scrapy</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#环境&quot; id=&quot;markdown-toc-环境&quot;&gt;环境：&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#初次安装&quot; id=&quot;markdown-toc-初次安装&quot;&gt;初次安装：&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+目录：
+
+[TOC]
+
+&lt;h2 id=&quot;环境&quot;&gt;环境：&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  python3  3.6.4， win7 64位
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;初次安装&quot;&gt;初次安装：&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install scrapy&lt;/code&gt;
+&lt;/blockquote&gt;
+
+使用这个命令，在win7 64位是怎么也安装不上去的，因为这已经是第二次了，
+
+当这个命令输出完后，会出现一系列的问题。当然了，不用怕，这不是需要解决问题的方法来了嘛。
+</description>
+        <pubDate>Thu, 04 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2018/01/04/scrapy-setup-in-win/</link>
+        <guid isPermaLink="true">http://localhost:4001/2018/01/04/scrapy-setup-in-win/</guid>
+        
+        <category>scrapy</category>
+        
+        <category>爬虫</category>
+        
+        
+        <category>Eurynome</category>
+        
+        <category>爬虫</category>
+        
+      </item>
+    
+      <item>
+        <title>Ubuntu16.04设置Pycharm桌面快捷键</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#ubuntu下所有的快捷方式都在&quot; id=&quot;markdown-toc-ubuntu下所有的快捷方式都在&quot;&gt;Ubuntu下所有的快捷方式都在：&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#解压&quot; id=&quot;markdown-toc-解压&quot;&gt;解压&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#终端打开&quot; id=&quot;markdown-toc-终端打开&quot;&gt;终端打开&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ubuntu下所有的快捷方式都在&quot;&gt;Ubuntu下所有的快捷方式都在：&lt;/h2&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;share&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;applications&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;解压&quot;&gt;解压&lt;/h2&gt;
+
+这里我将pycharm下载并解压到了/home/snakeson/developer文件夹下
+
+这里的pycharm.sh是批处理执行文件，prcharm.png是快捷方式图标
+
+&lt;h2 id=&quot;终端打开&quot;&gt;终端打开&lt;/h2&gt;
+
+使用Ubuntu终端进行打开：
+方法一（使用vim）：
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;vi&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;share&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;applications&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pycharm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;desktop&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+方法二（使用gedit）：
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gedit&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;usr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;share&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;applications&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pycharm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;desktop&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Wed, 13 Dec 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2017/12/13/Ubuntu16.04-pycharm-icon-setting/</link>
+        <guid isPermaLink="true">http://localhost:4001/2017/12/13/Ubuntu16.04-pycharm-icon-setting/</guid>
+        
+        <category>Ubuntu</category>
+        
+        <category>Pycharm</category>
+        
+        
+        <category>Eurynome</category>
+        
+        <category>SnakeSon</category>
+        
+      </item>
+    
+      <item>
+        <title>这是徐代龙进行的第二篇文章</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#目的&quot; id=&quot;markdown-toc-目的&quot;&gt;目的：&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;目的&quot;&gt;目的：&lt;/h2&gt;
+
+写这篇文章的目的主要是为了测试在本地进行md文件的编写是否能使用hexo进行html生成，然后上传到github上，通过访问https://day21.top 这个网站查看能否看到最新的文章
+</description>
+        <pubDate>Thu, 07 Dec 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2017/12/07/test-my-webapp/</link>
+        <guid isPermaLink="true">http://localhost:4001/2017/12/07/test-my-webapp/</guid>
+        
+        <category>hexo</category>
+        
+        <category>JavaScript</category>
+        
+        
+        <category>Eurynome</category>
+        
+        <category>SnakeSon</category>
+        
+      </item>
+    
+      <item>
+        <title>这是徐代龙进行的第二篇文章</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#目的&quot; id=&quot;markdown-toc-目的&quot;&gt;目的：&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;目的&quot;&gt;目的：&lt;/h2&gt;
+
+写这篇文章的目的主要是为了测试在本地进行md文件的编写是否能使用hexo进行html生成，然后上传到github上，通过访问https://day21.top 这个网站查看能否看到最新的文章
+</description>
+        <pubDate>Thu, 07 Dec 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4001/2017/12/07/git-push-github/</link>
+        <guid isPermaLink="true">http://localhost:4001/2017/12/07/git-push-github/</guid>
+        
+        <category>hexo</category>
+        
+        <category>JavaScript</category>
+        
+        
+        <category>Eurynome</category>
+        
+        <category>SnakeSon</category>
+        
+      </item>
+    
   </channel>
 </rss>
