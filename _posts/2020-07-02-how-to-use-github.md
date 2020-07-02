@@ -4,7 +4,8 @@ title: "github的上传步骤"
 data: 2020-07-02 17:53:40
 categories: github
 tags: github 上传
-author: Eurynome 
+excerpt: github文件上传相关,作个记录，免得天天到处查找。
+mathjax: true
 ---
 
 原文链接：https://blog.csdn.net/littlely_ll/article/details/80054481
