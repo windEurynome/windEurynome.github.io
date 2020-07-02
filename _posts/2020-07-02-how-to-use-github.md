@@ -4,11 +4,11 @@ title: "github的上传步骤"
 data: 2020-07-02 17:53:40
 categories: github
 tags: github 上传
-excerpt: github文件上传相关,作个记录，免得天天到处查找。
+excerpt: github文件上传相关,作个记录，免得天天到处查找。原文链接：https://blog.csdn.net/littlely_ll/article/details/80054481
 mathjax: true
 ---
 
-原文链接：https://blog.csdn.net/littlely_ll/article/details/80054481
+
 
 **由于自己不经常上传github，上传的时候老是忘记命令或步骤，所以在这记录一下github上传步骤。**
 ```
