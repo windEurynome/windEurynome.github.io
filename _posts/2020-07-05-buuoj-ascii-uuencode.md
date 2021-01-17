@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "buuoj,密码学的心声&Unencode"
-categories: crypto
+categories: crypto python
 tags: ASCII UUENCODE buuoj
 excerpt: buuoj刷题wp,本文章关于ASCII码进制转换和UUENCODE编码方式。
 data: 2020-07-05 23:00:00
@@ -35,8 +35,8 @@ flag{ILoveSecurityVeryMuch}
 
 #### 一点思考
   **解读题意，进制转换**，看到没有8，往8进制想，后转换成10进制再考虑ASCII码。
-  
-  
+
+
 # UNENCODE
 ## 题目
   89FQA9WMD<V1A<V1S83DY.#<W3$Q,2TM]
@@ -50,7 +50,7 @@ flag{ILoveSecurityVeryMuch}
 ```
 ## 解题
   直接解密网站破解：http://ctf.ssleye.com/uu.html
-  
+
 ## 获得flag
 ```
 flag{dsdasdsa99877LLLKK}

@@ -1,7 +1,7 @@
 ---
-layout: post
+rolayout: post
 title: "buuoj,rot"
-categories: crypto
+categories: crypto python
 tags: buuoj rot hash
 excerpt: buuoj刷题wp，本文章关于ROT移位加解密和关于MD5的hash碰撞。
 data: 2020-07-06 23:29:36
