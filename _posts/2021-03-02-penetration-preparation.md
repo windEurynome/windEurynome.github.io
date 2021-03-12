@@ -4,7 +4,7 @@ title: "penetration preparation"
 data: 2021-03-02 15:55:00
 categories: penetration
 tags: tool sqlmap docker ubuntu
-excerpet: 高级攻防课程的课前准备，主要配置环境，涉及ubuntu环境下安装sqlmap，docker等工具，并且在安装过程中遇到问题的解决总结。
+excerpt: 高级攻防课程的课前准备，主要配置环境，涉及ubuntu环境下安装sqlmap，docker等工具，并且在安装过程中遇到问题的解决总结。
 mathjax: true
 author: Eurynome
 ---
